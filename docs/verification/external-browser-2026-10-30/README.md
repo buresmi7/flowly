@@ -31,6 +31,8 @@ mobile or the whole Flowly board. Screenshots use `docs/promo/shot-lib.mjs`; the
 reserved host-sidebar area is excluded. No daemon connection, real card, token,
 external-service write, installation or plugin reload is involved.
 
+An [independent session](independent-review.md) reviewed implementation and evidence, repeated typecheck/component checks, and passed the full suite on commit `de7ab0c483523ac5d8e7d3337825709b0d1cd591`. It reported no candidate findings. Its initial archive-only Git-stats test failure and corrected checkout rerun are both recorded.
+
 ## Screenshots
 
 | State | Wide | Compact |
