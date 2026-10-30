@@ -1,0 +1,38 @@
+Flowly — external browser links
+Isolated component fixture · mocked Paseo host
+Artifacts
+3
+·
++
+Inputs
+↗
+Paseo documentation
+paseo.sh
+◉
+✎
+×
+GitHub issue #42
+GitHub issue
+◉
+✎
+×
+▤
+Implementation notes
+notes.txt
+◉
+✎
+×
+Session message
+Review
+HTTPS reference
+or
+HTTP reference
+.
+Unable to open this link.
+Unsupported schemes:
+Email contact
+(mailto:test@example.org)
+and
+Local reference
+(file:///tmp/example.txt)
+.

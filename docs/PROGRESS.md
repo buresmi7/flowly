@@ -986,3 +986,9 @@ Phase 2 spec: [PHASE-02-SPEC.md](PHASE-02-SPEC.md). Three current-card tools; au
 - 根因：Paseo 0.13 的 `publishAgentStream` 对 turn_completed/failed/canceled 一律发 `timeline: []`（SDK 类型仍声明该字段，所以编译无报错）。`SummaryService.enqueue` 对空文本直接返回，无错误记录。同一个空数组还影响 `byUser`/`pick`（Agent habits）、记忆线索、workpad 计划、外部会话 insights。
 - 修复：`server/turn-timeline.ts` 在空时读 timeline 最新一页的最后一轮，`agent.turn_ended` 入口统一使用；`agent.turn_ended` 的 `byUser` 在 10-26 起的事件里被记成 false，未回填。
 
+
+## 2026-10-30 — external links use the system browser
+
+Ported the three client opener changes from [PR #46](https://github.com/JasprW/flowly/pull/46) onto current main. URL artifacts, external-preview source buttons and session Markdown now call the public `openExternalUrl`; previews and existing error feedback stay intact. No SDK/version, settings, onboarding, tip, translation or telemetry changes are needed for this fix.
+
+Author checks: typecheck passed; 1,199 tests passed / 1 skipped; 62 headless component assertions passed at 960px and 390px, with six screenshots and three detected legacy-opener regressions. [Evidence, runnable fixture and limits](verification/external-browser-2026-10-30/README.md). Actual desktop Firefox and native mobile remain unverified. Work is in a fork; upstream PR creation awaits the requesting user's approval.
